@@ -1,0 +1,21 @@
+steps:
+
+- name: generate
+  image: docker.io/library/alpine
+  script:
+  - echo "generating source"
+  - sh -c 'mkdir -p build'
+  - sh -c 'echo "hello world" > build/generated'
+
+- name: build
+  image: docker.io/library/alpine
+  script:
+  - echo "building from source"
+  - sh -c 'echo "built from source below:" > build/built'
+  - sh -c 'cat build/generated >> buiild/built'
+
+- name: package
+  image: docker.io/library/alpine
+  script:
+  - echo "packaging"
+  - tar -czvf build/package.tar.gz build/built

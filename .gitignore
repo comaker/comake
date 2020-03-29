@@ -1,0 +1,9 @@
+comake
+comake.exe
+comake.exe~
+
+*.test
+*.out
+
+examples/build
+build

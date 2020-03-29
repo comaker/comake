@@ -1,0 +1,8 @@
+steps:
+
+- name: greeting
+  image: docker.io/library/alpine
+  script:
+  - echo "starting to greet everyone"
+  - sh -c 'mkdir -p build'
+  - sh -c 'echo "hello world" > build/hello'
