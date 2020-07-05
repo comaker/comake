@@ -6,6 +6,7 @@ import (
 	"io"
 	"log"
 	"os"
+	"os/user"
 	"regexp"
 	"time"
 
@@ -126,11 +127,17 @@ func pullImageIfDoesntExist(ctx context.Context, cli *client.Client, image strin
 }
 
 func startContainer(ctx context.Context, cli *client.Client, image, containerName, workingDir string) (containerID string, err error) {
+	user, err := user.Current()
+	if err != nil {
+		panic(err)
+	}
+
 	containerCreate, err := cli.ContainerCreate(
 		ctx,
 		&container.Config{
 			Image:        image,
 			WorkingDir:   "/source",
+			User:         user.Uid,
 			AttachStdin:  true,
 			AttachStdout: true,
 			AttachStderr: true,
