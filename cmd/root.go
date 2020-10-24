@@ -18,9 +18,6 @@ var rootCmd = &cobra.Command{
 	Short: "Containerized build tool",
 	Long: `Comake makes your application's build setup portable by containerizing it.
 	Developers would need only Docker and Comake to build your projects.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	//	Run: func(cmd *cobra.Command, args []string) { },
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.

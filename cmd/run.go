@@ -18,7 +18,6 @@ import (
 	"github.com/docker/docker/api/types/mount"
 	"github.com/docker/docker/api/types/network"
 	"github.com/docker/docker/client"
-	"github.com/docker/go-connections/nat"
 
 	shellwords "github.com/mattn/go-shellwords"
 )
@@ -74,7 +73,6 @@ var runCmd = &cobra.Command{
 				panic(err)
 			}
 
-			// TODO wait for the container to be ready?
 			// TODO print logs of container starting?
 
 			// Run step commands
@@ -150,14 +148,6 @@ func startContainer(ctx context.Context, cli *client.Client, image, containerNam
 					Type:   mount.TypeBind,
 					Source: workingDir,
 					Target: "/source",
-				},
-			},
-			PortBindings: nat.PortMap{
-				"8080/tcp": []nat.PortBinding{
-					{
-						HostIP:   "",
-						HostPort: "8080",
-					},
 				},
 			},
 		},
