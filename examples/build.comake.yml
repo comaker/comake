@@ -12,7 +12,7 @@ steps:
   script:
   - echo "building from source"
   - sh -c 'echo "built from source below:" > build/built'
-  - sh -c 'cat build/generated >> buiild/built'
+  - sh -c 'cat build/generated >> build/built'
 
 - name: package
   image: docker.io/library/alpine
