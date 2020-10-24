@@ -26,16 +26,18 @@ comake -f hello-build.yml run
 
 ### Build steps
 
-All build steps are listed in the build file inside `tasks:` array.
-The steps are run in the same order they listed in the build file.
+All build steps are listed in the build file under `steps:` array.
+The steps are ran one after another in the same order they were declared.
 
 ### Step configuration
 
-Each step in run inside a Docker container.
-Enter the Docker image in `image` field.
+Each step is run inside a Docker container.
+The image for the Docker container should be provided under `image` field.
 The `script` field holds an array of all the commands to be run inside the container.
+
 The working directory will be available in the container under `/source/` directory.
 By default the working directory is the directory where the `comake` command is run in.
 It can be changed using `--workdir` option.
-Please note that, for now, if you need to use scripting features you need to use `sh -c "<script>"` (or similar for diffent shells).
+
+Please note that, as of now, if you need to use scripting features you need to use `sh -c "<script>"` (or similar for diffent shells).
 Better shell support will be added in the future.
