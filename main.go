@@ -15,7 +15,7 @@ limitations under the License.
 */
 package main
 
-import "github.com/jtogrul/comake/cmd"
+import "github.com/comaker/comake/cmd"
 
 func main() {
 	cmd.Execute()

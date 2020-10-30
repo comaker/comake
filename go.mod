@@ -1,4 +1,4 @@
-module github.com/jtogrul/comake
+module github.com/comaker/comake
 
 go 1.13
 

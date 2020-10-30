@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/jtogrul/comake/util"
+	"github.com/comaker/comake/util"
 	"github.com/spf13/cobra"
 
 	"github.com/docker/docker/api/types"

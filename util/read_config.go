@@ -3,7 +3,7 @@ package util
 import (
 	"io/ioutil"
 
-	"github.com/jtogrul/comake/types"
+	"github.com/comaker/comake/types"
 
 	"gopkg.in/yaml.v2"
 )
