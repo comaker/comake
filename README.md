@@ -1,3 +1,5 @@
+<img src="logo.svg" alt="Comake Logo" width="200">
+
 # comake - Containerized Build Tool
 
 Comake enables containerization for builds. Containerization for runtime is a good idea, it should be same for buildtime too.
