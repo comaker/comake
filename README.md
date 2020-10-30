@@ -24,6 +24,13 @@ steps:
 comake -f hello-build.yml run
 ```
 
+## Installation
+
+Simply download the latest binary for your operation system from the [releases page][releases].
+For better accesibility make sure the binary's location in the `PATH`
+
+For example, `/usr/local/bin` would work for Linux and MacOS.
+
 ## Buildfile documentation
 
 ### Build steps
@@ -43,3 +50,5 @@ It can be changed using `--workdir` option.
 
 Please note that, as of now, if you need to use scripting features you need to use `sh -c "<script>"` (or similar for diffent shells).
 Better shell support will be added in the future.
+
+[releases]: https://github.com/comaker/comake/releases/
