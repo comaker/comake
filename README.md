@@ -31,6 +31,13 @@ For better accesibility make sure the binary's location in the `PATH`
 
 For example, `/usr/local/bin` would work for Linux and MacOS.
 
+## Available commands
+|Command|Description|
+|-------|-|
+|list   |List available steps|
+|run    |Execute build steps as described in the build file|
+|help   |Help about any command|
+
 ## Buildfile documentation
 
 ### Build steps
